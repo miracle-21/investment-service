@@ -23,7 +23,7 @@ class UserHolding(models.Model):
         db_table = 'user_holdings'
 
     def __str__(self):
-        return self.quantity
+        return str(self.quantity)
 
 
 class Account(models.Model):
