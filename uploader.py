@@ -68,11 +68,16 @@ try:
                         holding_id = i.id,
                         quantity = quantity
                     )
-
+                '''
+                account total_assests
+                '''
+                for i in Account.objects.filter(account_name=account_name):
+                        i.total_assests = int(current_price) * int(quantity)
+                        i.save()
         """
         account_basic_info_set uploader
-        # investment principal
-        # """
+        investment principal
+        """
         with open(CSV_PATH_ACCOUNT_BASIC) as in_file:
             data_reader = csv.reader(in_file)
             for row in data_reader:
@@ -101,6 +106,6 @@ try:
                     name = name,
                     isin = isin,
                     asset_group = asset_group
-        #         )
+                )
 except IntegrityError:
     raise IntegrityError
