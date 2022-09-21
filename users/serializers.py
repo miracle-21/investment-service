@@ -4,10 +4,12 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from .models import User
 
 
-"""로그인"""
 class SignInSerializer(TokenObtainPairSerializer):
+    '''
+    로그인
+    '''
     def validate(self, data):
-        """로그인 유효성 검사"""
+        '''로그인 유효성 검사'''
         username = data.get("username")
         password = data.get("password")
 
@@ -33,8 +35,10 @@ class SignInSerializer(TokenObtainPairSerializer):
         return data
 
 
-"""회원가입"""
 class RegisterSerializer(serializers.ModelSerializer):
+    '''
+    회원가입
+    '''
     password = serializers.CharField(min_length=8,write_only=True)
 
     class Meta:

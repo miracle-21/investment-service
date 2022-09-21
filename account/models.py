@@ -14,13 +14,22 @@ class Holding(models.Model):
         return self.name
 
 
-class UserHolding(models.Model):
+class HoldingsRegist(models.Model):
+    user      = models.ForeignKey(User, on_delete=models.CASCADE) 
+    holding   = models.ForeignKey(Holding, on_delete=models.CASCADE)
+    signature = models.CharField(max_length=300, default='') # 거래 회원 정보 암호화
+    transfer_identifier = models.IntegerField(default=1) # 거래량 암호화
+    
+    class Meta:
+        db_table = 'holdings_regist'
+
+class FinalHolding(models.Model):
     user      = models.ForeignKey(User, on_delete=models.CASCADE)
     holding   = models.ForeignKey(Holding, on_delete=models.CASCADE)
     quantity  = models.IntegerField() # 보유수량
     
     class Meta:
-        db_table = 'user_holdings'
+        db_table = 'final_holdings'
 
     def __str__(self):
         return str(self.quantity)
