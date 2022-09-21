@@ -110,7 +110,7 @@ class TransferView(View):
 
             regist.delete()
 
-            return JsonResponse({'주문 전 총자산' : int(pre_assests), '주문 후 총자산': int(account.total_assests)}, status = 201)
+            return JsonResponse({'주문 전 총자산' : int(pre_assests), '주문 후 총자산': int(account.total_assests)}, status = 200)
 
         except User.DoesNotExist:
             return JsonResponse({'message' : '존재하지 않는 회원입니다'}, status = 401)
