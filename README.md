@@ -86,5 +86,5 @@ Language | Framework | Database | HTTP | Tools
 ## 🔖 참조 문서
 - [postman API 링크](https://documenter.getpostman.com/view/18832289/2s7Z7YJuGb)
 
-![](https://velog.velcdn.com/images/miracle-21/post/5f3f385a-54f3-4d69-b14b-5f0dd0557e49/image.png)
+![](https://velog.velcdn.com/images/miracle-21/post/4578c1c3-016c-4bde-9ee1-9273abde90ed/image.gif)
 
