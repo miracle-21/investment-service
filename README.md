@@ -1,6 +1,6 @@
 ## 📎 목차
 
-1. [Posting Service](#-posting-service)
+1. [Service](#-service)
 2. [개발 기간](#-개발-기간)
 3. [개발 인원](#-개발-인원)
 4. [요구사항 및 분석](#-요구사항-및-분석)
@@ -9,7 +9,7 @@
 7. [ERD](#-erd)
 8. [API 명세서](#-api-명세서)
 
-## 🚀Posting Service
+## 🚀 Service
 주어진 고객 투자 데이터를 응답하는 REST API 개발
 ## 📆 개발 기간
 - 2022.09.16 ~ 2022.09.21(6일)
